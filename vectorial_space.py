@@ -69,6 +69,10 @@ def minkowski_distance(v_1: ndarray, v_2: ndarray, p: int) -> float:
     return p_diffs.sum() ** (1 / p)
 
 
+def manhattan_distance(v_1: ndarray, v_2: ndarray) -> float:
+    return minkowski_distance(v_1, v_2, 1)
+
+
 def max_manhattan_distance(v_space: VectorSpace) -> ndarray:
     """
     Computes the maximum manhattan distance ($L_1$) in an n-ary vector space.
